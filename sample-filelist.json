@@ -1,0 +1,76 @@
+{
+  "/project_documentation/" : {
+  "readme.txt" : "Project overview containing setup instructions, dependencies, and basic usage guidelines",
+  "changelog.txt" : "Version history documenting all updates, bug fixes, and feature additions since project inception",
+  "contributors.txt" : "List of team members with their roles, contact information, and contribution areas",
+  "index.html" : "Main documentation landing page with navigation links to all project resources",
+  "api_reference.html" : "Complete API documentation with endpoints, parameters, and example responses"
+},
+  "/customer_data/" : {
+  "survey_results.txt" : "Raw customer satisfaction survey responses from Q3 2024 campaigns",
+  "contact_list.txt" : "Customer contact information database in CSV format for email marketing",
+  "feedback_summary.txt" : "Aggregated customer feedback organized by product category and sentiment",
+  "dashboard.html" : "Interactive customer analytics dashboard with charts and KPI visualizations",
+  "report_template.html" : "Standardized HTML template for generating monthly customer insight reports"
+},
+  "/blog_content/" : {
+  "draft_posts.txt" : "Work-in-progress blog articles awaiting editorial review and publication",
+  "keywords.txt" : "SEO keyword research data with search volumes and competition metrics",
+  "editorial_calendar.txt" : "Content publishing schedule with topics, authors, and deadlines",
+  "archive.html" : "Blog post archive page displaying all published articles by date and category",
+  "newsletter.html" : "Email newsletter template with placeholder sections for weekly content digest"
+},
+  "/recipes/" : {
+  "ingredients_list.txt" : "Master inventory of all recipe ingredients with nutritional information",
+  "cooking_notes.txt" : "Personal annotations about recipe modifications and cooking tips",
+  "meal_plan.txt" : "Weekly meal planning schedule with shopping lists and prep times",
+  "recipe_gallery.html" : "Photo gallery showcasing finished dishes with links to full recipes",
+  "printable_cards.html" : "Printer-friendly recipe card templates with ingredient lists and instructions"
+},
+  "/research_lab/" : {
+  "experiment_log.txt" : "Detailed records of all experiments including methodologies and observations",
+  "literature_review.txt" : "Summaries of relevant academic papers and research findings",
+  "data_analysis.txt" : "Statistical analysis results and interpretation of research data",
+  "findings_presentation.html" : "Interactive presentation slides highlighting key research discoveries",
+  "visualization.html" : "Data visualization page with interactive charts and graphs of research results"
+},
+"/user001/projects/prj-20250818/project_docs/" : {
+"overview.txt/" : "Concise executive summary outlining the project’s mission, objectives, and key stakeholders.",
+"requirements.txt/" : "Technical specifications documenting functional needs, constraints, and acceptance criteria for development.",
+"timeline.txt/" : "Gantt chart–inspired schedule detailing phased deliverables, deadlines, and cross-team dependencies.",
+"index.html/" : "Responsive homepage featuring a navigation hub, search bar, and dynamic project status dashboard.",
+"glossary.html/" : "Searchable reference library defining domain-specific terminology, acronyms, and proprietary concepts."
+},
+
+"/user001/projects/prj-20250818/user_guides/" : {
+"quickstart.txt/" : "Illustrated setup wizard with bullet-point instructions for installing, configuring, and launching the tool.",
+"troubleshooting.txt/" : "Symptom-based problem-solving guide addressing error codes, connectivity issues, and performance bottlenecks.",
+"accessibility.txt/" : "WCAG-compliant guidelines for keyboard navigation, screen-reader support, and inclusive design patterns.",
+"video_tutorials.html/" : "Embedded multimedia library with chaptered video demos, transcripts, and downloadable exercise files.",
+"print_edition.html/" : "Printer-optimized manual with collapsible sections, QR code shortcuts, and large-format diagrams."
+},
+
+"/user001/projects/prj-20250818/api_reference/" : {
+"endpoints.txt/" : "Alphabetized catalog of RESTful routes, HTTP methods, and payload structures with versioning notes.",
+"rate_limiting.txt/" : "Quota management rules explaining header parameters, retry algorithms, and abuse detection protocols.",
+"webhooks.txt/" : "Event subscription templates for real-time callbacks, payload schemas, and signature verification.",
+"interactive_console.html/" : "Browser-based testing sandbox with OAuth authentication, response visualizers, and curl command generators.",
+"changelog.html/" : "Version-history timeline annotating deprecated features, security patches, and backward-incompatible updates."
+},
+
+"/user001/projects/prj-20250818/design_system/" : {
+"color_palette.txt/" : "Hex/RGB value reference for brand colors, accessible contrast ratios, and usage restrictions.",
+"component_library.txt/" : "Atomic design inventory listing UI elements (buttons, modals) with code snippets and behavioral rules.",
+"voice_tone.txt/" : "Linguistic standards for microcopy, error messages, and UX writing across user journeys.",
+"theme_builder.html/" : "Customizable interface simulating dark/light modes, spacing scales, and responsive breakpoints.",
+"accessibility_audit.html/" : "Automated compliance reporter scoring color contrast, ARIA labels, and focus management."
+},
+
+"/user001/projects/prj-20250818/analytics_repo/" : {
+"kpi_definitions.txt/" : "Metric taxonomy aligning business goals with tracked events, dimensions, and calculation methodologies.",
+"data_dictionary.txt/" : "Column-level metadata for database schemas, including data types, sources, and retention policies.",
+"etl_workflows.txt/" : "Pipeline documentation for data extraction, transformation, and loading sequences with error handling.",
+"dashboard_templates.html/" : "Plug-and-play visualization canvases for cohort analysis, funnel metrics, and geographic heatmaps.",
+"compliance_logs.html/" : "Audit trail archive recording user permissions, data-access requests, and anonymization timestamps."
+}
+}

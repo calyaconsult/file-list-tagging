@@ -1,0 +1,39 @@
+body { font-family: sans-serif; margin: 20px; }
+ul { list-style: none; padding: 0; margin-bottom: 2em; }
+li.crd {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 6px 0;
+  cursor: pointer;
+  position: relative;
+}
+li.crd:hover { background: #f9f9f9; }
+.tags { margin-top: 5px; }
+.tag {
+  display: inline-block;
+  background: #e0e0e0;
+  border-radius: 12px;
+  padding: 2px 8px;
+  margin: 2px;
+  font-size: 0.8em;
+}
+.dropdown {
+  position: absolute;
+  top: 100%; left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  margin-top: 4px;
+  display: none;
+  z-index: 100;
+}
+.dropdown label { display: block; margin: 4px 0; }
+.dropdown input[type="text"] { width: 90%; padding: 4px; margin-top: 6px; }
+.dropdown button { margin-top: 6px; }
+.controls { margin-bottom: 1em; }
+#errorMessage { color: red; margin-bottom: 1em; }
+.qu {
+  padding-left: 1em;
+}
