@@ -8,8 +8,8 @@ def csv_to_json(csv_file_path, json_file_path):
         csv_reader = csv.DictReader(csv_file)
         
         for row in csv_reader:
-            # Split the Keywords string into a list of individual keywords
-            row['Keywords'] = row['Keywords'].split() if row['Keywords'] else []
+            # Split the Keywords string into a list of individual keywords and convert to lowercase
+            row['Keywords'] = [keyword.lower() for keyword in row['Keywords'].split()] if row['Keywords'] else []
             data.append(row)
     
     # Write to JSON file
