@@ -1,0 +1,853 @@
+{
+  "bodensee": {
+    "Claude 4": "Cities and Places (German-speaking areas)",
+    "IBM Granite": "Places",
+    "Mistral": "Places",
+    "ChatGPT 4o": "Places-Cities"
+  },
+  "konstanz": {
+    "Claude 4": "Cities and Places (German-speaking areas)",
+    "IBM Granite": "Places",
+    "Mistral": "Places",
+    "ChatGPT 4o": "Places-Cities"
+  },
+  "munich": {
+    "Claude 4": "Cities and Places (German-speaking areas)",
+    "IBM Granite": "Places",
+    "Mistral": "Places",
+    "ChatGPT 4o": "Places-Cities"
+  },
+  "zurich": {
+    "Claude 4": "Cities and Places (German-speaking areas)",
+    "Mistral": "Places",
+    "ChatGPT 4o": "Places-Cities"
+  },
+  "zürich": {
+    "Claude 4": "Cities and Places (German-speaking areas)",
+    "Mistral": "Places",
+    "ChatGPT 4o": "Places-Cities"
+  },
+  "dubai": {
+    "Claude 4": "Cities and Places (MiddleEast/International cities)",
+    "IBM Granite": "Places",
+    "Mistral": "Places",
+    "ChatGPT 4o": "Places-Cities"
+  },
+  "istanbul": {
+    "Claude 4": "Cities and Places (MiddleEast/International cities)",
+    "IBM Granite": "Places",
+    "Mistral": "Places",
+    "ChatGPT 4o": "Places-Cities"
+  },
+  "oxford": {
+    "Claude 4": "Cities and Places (European cities)",
+    "IBM Granite": "Places",
+    "Mistral": "Places",
+    "ChatGPT 4o": "Places-Cities"
+  },
+  "paris": {
+    "Claude 4": "Cities and Places (European cities)",
+    "IBM Granite": "Places",
+    "Mistral": "Places",
+    "ChatGPT 4o": "Places-Cities"
+  },
+  "north": {
+    "Claude 4": "Cities and Places (Geographic references)",
+    "IBM Granite": "Places",
+    "Mistral": "Places",
+    "ChatGPT 4o": "Places-Cities"
+  },
+  "tucson": {
+    "Claude 4": "Cities and Places (Geographic references)",
+    "IBM Granite": "Places",
+    "Mistral": "Places",
+    "ChatGPT 4o": "Places-Cities"
+  },
+  "aria": {
+    "Claude 4": "Proper Names",
+    "IBM Granite": "Places",
+    "Mistral": "People",
+    "ChatGPT 4o": "Characters-Named"
+  },
+  "alison": {
+    "Claude 4": "Proper Names",
+    "IBM Granite": "Names",
+    "Mistral": "People",
+    "ChatGPT 4o": "Characters-Named"
+  },
+  "chen": {
+    "Claude 4": "Proper Names",
+    "IBM Granite": "Names",
+    "Mistral": "People",
+    "ChatGPT 4o": "Characters-Named"
+  },
+  "hafsa": {
+    "Claude 4": "Proper Names",
+    "IBM Granite": "Names",
+    "Mistral": "People",
+    "ChatGPT 4o": "Characters-Named"
+  },
+  "kasper": {
+    "Claude 4": "Proper Names",
+    "IBM Granite": "Names",
+    "Mistral": "People",
+    "ChatGPT 4o": "Characters-Named"
+  },
+  "niggel": {
+    "Claude 4": "Proper Names",
+    "IBM Granite": "Names",
+    "Mistral": "People",
+    "ChatGPT 4o": "Characters-Named"
+  },
+  "santa": {
+    "Claude 4": "Proper Names",
+    "Mistral": "Places",
+    "ChatGPT 4o": "Holiday-Christmas"
+  },
+  "sarah": {
+    "Claude 4": "Proper Names",
+    "IBM Granite": "Names",
+    "Mistral": "People",
+    "ChatGPT 4o": "Characters-Named"
+  },
+  "seppl": {
+    "Claude 4": "Proper Names",
+    "IBM Granite": "Names",
+    "Mistral": "People",
+    "ChatGPT 4o": "Characters-Named"
+  },
+  "vesta": {
+    "Claude 4": "Proper Names",
+    "Mistral": "Places"
+  },
+  "adventure": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Fictional-Fantasy"
+  },
+  "author": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "People",
+    "ChatGPT 4o": "Literature-Literature"
+  },
+  "blog": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Miscellaneous-Unclassified/Odd"
+  },
+  "book": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Literature-Literature"
+  },
+  "chapter": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Literature-Literature"
+  },
+  "character": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Characters-General"
+  },
+  "characters": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Characters-General"
+  },
+  "creative": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Concepts-Abstract"
+  },
+  "fantasy": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Fantasy",
+    "ChatGPT 4o": "Fictional-Fantasy"
+  },
+  "fiction": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Literature-Literature"
+  },
+  "genre": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Cultural-Culture"
+  },
+  "introduction": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Reading-Engagement:"
+  },
+  "literary": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Literature-Literature"
+  },
+  "literature": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Literature-Literature"
+  },
+  "narrative": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Literature-Literature"
+  },
+  "novel": {
+    "Claude 4": "Literary and Writing Terms",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Literature-Literature"
+  },
+  "outline": {
+    "Claude 4": "Literary and Writing Terms",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Miscellaneous-Unclassified/Odd"
+  },
+  "plot": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Literature-Literature"
+  },
+  "protagonist": {
+    "Claude 4": "Literary and Writing Terms",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Characters-General"
+  },
+  "sentence": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Reading-Engagement:"
+  },
+  "series": {
+    "Claude 4": "Literary and Writing Terms",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Literature-Literature"
+  },
+  "setting": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Settings-Places"
+  },
+  "stories": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Literature-Literature"
+  },
+  "story": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Literature-Literature"
+  },
+  "storytelling": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Literature-Literature"
+  },
+  "structure": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "ChatGPT 4o": "Literature-Literature"
+  },
+  "style": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Miscellaneous-Unclassified/Odd"
+  },
+  "tale": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Literature-Literature"
+  },
+  "text": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Literature-Literature"
+  },
+  "themes": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Literature-Literature"
+  },
+  "title": {
+    "Claude 4": "Literary and Writing Terms",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Literature-Literature"
+  },
+  "voice": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Human-Relationships"
+  },
+  "writing": {
+    "Claude 4": "Literary and Writing Terms",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Literature-Literature"
+  },
+  "challenge": {
+    "Claude 4": "Abstract Concepts",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Conflict",
+    "ChatGPT 4o": "Theme:-Mystery"
+  },
+  "challenges": {
+    "Claude 4": "Abstract Concepts",
+    "Mistral": "Conflict",
+    "ChatGPT 4o": "Theme:-Mystery"
+  },
+  "change": {
+    "Claude 4": "Abstract Concepts",
+    "Mistral": "Time",
+    "ChatGPT 4o": "Concepts-Abstract"
+  },
+  "changes": {
+    "Claude 4": "Abstract Concepts",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Time",
+    "ChatGPT 4o": "Concepts-Abstract"
+  },
+  "conflict": {
+    "Claude 4": "Abstract Concepts",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Conflict",
+    "ChatGPT 4o": "Theme:-Mystery"
+  },
+  "crisis": {
+    "Claude 4": "Abstract Concepts",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Conflict",
+    "ChatGPT 4o": "Theme:-Mystery"
+  },
+  "decision": {
+    "Claude 4": "Abstract Concepts",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Time",
+    "ChatGPT 4o": "Concepts-Abstract"
+  },
+  "dream": {
+    "Claude 4": "Abstract Concepts",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Fantasy",
+    "ChatGPT 4o": "Human-Relationships"
+  },
+  "empire": {
+    "Claude 4": "Abstract Concepts",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Fantasy",
+    "ChatGPT 4o": "Miscellaneous-Unclassified/Odd"
+  },
+  "encounter": {
+    "Claude 4": "Abstract Concepts",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Fantasy",
+    "ChatGPT 4o": "Fictional-Fantasy"
+  },
+  "energy": {
+    "Claude 4": "Abstract Concepts",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Science",
+    "ChatGPT 4o": "Science-Scientific"
+  },
+  "experience": {
+    "Claude 4": "Abstract Concepts",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Fictional-Fantasy"
+  },
+  "experiences": {
+    "Claude 4": "Abstract Concepts",
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Fictional-Fantasy"
+  },
+  "future": {
+    "Claude 4": "Abstract Concepts",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Time",
+    "ChatGPT 4o": "Time-Temporal"
+  },
+  "journey": {
+    "Claude 4": "Abstract Concepts",
+    "IBM Granite": "Concepts/Abstracts",
+    "ChatGPT 4o": "Human-Relationships"
+  },
+  "perspective": {
+    "Claude 4": "Abstract Concepts",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Concepts-Abstract"
+  },
+  "power": {
+    "Claude 4": "Abstract Concepts",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Business"
+  },
+  "powerful": {
+    "Claude 4": "Descriptive and Qualitative",
+    "Mistral": "Business",
+    "ChatGPT 4o": "Fictional-Fantasy"
+  },
+  "powers": {
+    "Claude 4": "Abstract Concepts",
+    "Mistral": "Business",
+    "ChatGPT 4o": "Fictional-Fantasy"
+  },
+  "presence": {
+    "Claude 4": "Abstract Concepts",
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Human-Relationships"
+  },
+  "present": {
+    "Claude 4": "Abstract Concepts",
+    "Mistral": "Time",
+    "ChatGPT 4o": "Time-Temporal"
+  },
+  "risk": {
+    "Claude 4": "Abstract Concepts",
+    "Mistral": "Conflict",
+    "ChatGPT 4o": "Concepts-Abstract"
+  },
+  "risks": {
+    "Claude 4": "Abstract Concepts",
+    "Mistral": "Conflict",
+    "ChatGPT 4o": "Concepts-Abstract"
+  },
+  "scenario": {
+    "Claude 4": "Abstract Concepts",
+    "ChatGPT 4o": "Settings-Places"
+  },
+  "tension": {
+    "Claude 4": "Abstract Concepts",
+    "ChatGPT 4o": "Theme:-Mystery"
+  },
+  "transformation": {
+    "Claude 4": "Abstract Concepts",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Time",
+    "ChatGPT 4o": "Fictional-Fantasy"
+  },
+  "version": {
+    "Claude 4": "Abstract Concepts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Miscellaneous-Unclassified/Odd"
+  },
+  "critical": {
+    "Claude 4": "Descriptive and Qualitative",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Concepts-Abstract"
+  },
+  "cultural": {
+    "Claude 4": "Descriptive and Qualitative",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Culture",
+    "ChatGPT 4o": "Cultural-Culture"
+  },
+  "dangerous": {
+    "Claude 4": "Descriptive and Qualitative",
+    "Mistral": "Conflict",
+    "ChatGPT 4o": "Theme:-Mystery"
+  },
+  "dark": {
+    "Claude 4": "Descriptive and Qualitative",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Theme:-Mystery"
+  },
+  "global": {
+    "Claude 4": "Descriptive and Qualitative",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Culture",
+    "ChatGPT 4o": "Cultural-Social"
+  },
+  "historical": {
+    "Claude 4": "Descriptive and Qualitative",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Time-Temporal"
+  },
+  "rich": {
+    "Claude 4": "Descriptive and Qualitative",
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Concepts-Abstract"
+  },
+  "scientific": {
+    "Claude 4": "Descriptive and Qualitative",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Science",
+    "ChatGPT 4o": "Science-Scientific"
+  },
+  "significant": {
+    "Claude 4": "Descriptive and Qualitative",
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Concepts-Abstract"
+  },
+  "technological": {
+    "Claude 4": "Descriptive and Qualitative",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Science",
+    "ChatGPT 4o": "Science-Scientific"
+  },
+  "traditional": {
+    "Claude 4": "Descriptive and Qualitative",
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Culture",
+    "ChatGPT 4o": "Cultural-Culture"
+  },
+  "santa (likely a place name, e.g., santa fe)": {
+    "IBM Granite": "Places"
+  },
+  "zurich (also zürich)": {
+    "IBM Granite": "Places"
+  },
+  "alien": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Fantasy",
+    "ChatGPT 4o": "Fictional-Fantasy"
+  },
+  "aliens": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Fantasy",
+    "ChatGPT 4o": "Fictional-Fantasy"
+  },
+  "art": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Cultural-Culture"
+  },
+  "artifact": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Cultural-Culture"
+  },
+  "business": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Business",
+    "ChatGPT 4o": "Cultural-Social"
+  },
+  "century": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Time",
+    "ChatGPT 4o": "Time-Temporal"
+  },
+  "christmas": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Holiday-Christmas"
+  },
+  "city": {
+    "IBM Granite": "Concepts/Abstracts",
+    "ChatGPT 4o": "Settings-Places"
+  },
+  "concierge": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Miscellaneous-Unclassified/Odd"
+  },
+  "crime": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Conflict",
+    "ChatGPT 4o": "Theme:-Mystery"
+  },
+  "culture": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Culture",
+    "ChatGPT 4o": "Cultural-Culture"
+  },
+  "cyber": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Science",
+    "ChatGPT 4o": "Science-Scientific"
+  },
+  "danger": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Conflict",
+    "ChatGPT 4o": "Theme:-Mystery"
+  },
+  "death": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Conflict",
+    "ChatGPT 4o": "Theme:-Mystery"
+  },
+  "desert": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Nature",
+    "ChatGPT 4o": "Fictional-Fantasy"
+  },
+  "discovery": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Nature",
+    "ChatGPT 4o": "Fictional-Fantasy"
+  },
+  "history": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Cultural-Culture"
+  },
+  "humanity": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Culture",
+    "ChatGPT 4o": "Human-Relationships"
+  },
+  "humans": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Culture",
+    "ChatGPT 4o": "Characters-General"
+  },
+  "intelligence": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Science",
+    "ChatGPT 4o": "Science-Scientific"
+  },
+  "issues": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Culture",
+    "ChatGPT 4o": "Cultural-Social"
+  },
+  "jeannie": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "People",
+    "ChatGPT 4o": "Holiday-Christmas"
+  },
+  "magic": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Fantasy",
+    "ChatGPT 4o": "Fictional-Fantasy"
+  },
+  "management": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Business",
+    "ChatGPT 4o": "Cultural-Social"
+  },
+  "math": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Science-Scientific"
+  },
+  "military": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Theme:-Mystery"
+  },
+  "mother": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "People",
+    "ChatGPT 4o": "Human-Relationships"
+  },
+  "murder": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Conflict",
+    "ChatGPT 4o": "Theme:-Mystery"
+  },
+  "music": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Cultural-Culture"
+  },
+  "mystery": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Fantasy",
+    "ChatGPT 4o": "Theme:-Mystery"
+  },
+  "nature": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Nature"
+  },
+  "plan": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Business",
+    "ChatGPT 4o": "Miscellaneous-Unclassified/Odd"
+  },
+  "political": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Culture",
+    "ChatGPT 4o": "Cultural-Social"
+  },
+  "science": {
+    "IBM Granite": "Concepts/Abstracts",
+    "ChatGPT 4o": "Science-Scientific"
+  },
+  "search": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Miscellaneous-Unclassified/Odd"
+  },
+  "secret": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Fantasy",
+    "ChatGPT 4o": "Fictional-Fantasy"
+  },
+  "secrets": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Fantasy",
+    "ChatGPT 4o": "Fictional-Fantasy"
+  },
+  "security": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Cultural-Social"
+  },
+  "space": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Fantasy",
+    "ChatGPT 4o": "Fictional-Fantasy"
+  },
+  "species": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Fantasy",
+    "ChatGPT 4o": "Science-Scientific"
+  },
+  "systems": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Business",
+    "ChatGPT 4o": "Science-Scientific"
+  },
+  "technology": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Science",
+    "ChatGPT 4o": "Science-Scientific"
+  },
+  "term": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Reading-Engagement:"
+  },
+  "terms": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Reading-Engagement:"
+  },
+  "time": {
+    "IBM Granite": "Concepts/Abstracts",
+    "Mistral": "Time",
+    "ChatGPT 4o": "Time-Temporal"
+  },
+  "world": {
+    "IBM Granite": "Concepts/Abstracts",
+    "ChatGPT 4o": "Fictional-Fantasy"
+  },
+  "sombreville (likely a place name)": {
+    "IBM Granite": "Miscellaneous"
+  },
+  "sombreville": {
+    "Mistral": "Places",
+    "ChatGPT 4o": "Places-Cities"
+  },
+  "grandma": {
+    "Mistral": "People",
+    "ChatGPT 4o": "Human-Relationships"
+  },
+  "painting": {
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Cultural-Culture"
+  },
+  "read": {
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Miscellaneous-Unclassified/Odd"
+  },
+  "reader": {
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Characters-General"
+  },
+  "readers": {
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Characters-General"
+  },
+  "roman": {
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Miscellaneous-Unclassified/Odd"
+  },
+  "scene": {
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Literature-Literature"
+  },
+  "works": {
+    "Mistral": "Literature",
+    "ChatGPT 4o": "Miscellaneous-Unclassified/Odd"
+  },
+  "businesses": {
+    "Mistral": "Business",
+    "ChatGPT 4o": "Cultural-Social"
+  },
+  "threat": {
+    "Mistral": "Conflict",
+    "ChatGPT 4o": "Theme:-Mystery"
+  },
+  "past": {
+    "Mistral": "Time",
+    "ChatGPT 4o": "Time-Temporal"
+  },
+  "times": {
+    "Mistral": "Time",
+    "ChatGPT 4o": "Time-Temporal"
+  },
+  "reality": {
+    "Mistral": "Culture",
+    "ChatGPT 4o": "Fictional-Fantasy"
+  },
+  "genie": {
+    "Mistral": "Fantasy",
+    "ChatGPT 4o": "Holiday-Christmas"
+  },
+  "lamp": {
+    "Mistral": "Fantasy",
+    "ChatGPT 4o": "Holiday-Christmas"
+  },
+  "noir": {
+    "Mistral": "Fantasy",
+    "ChatGPT 4o": "Theme:-Mystery"
+  },
+  "reindeer": {
+    "Mistral": "Nature",
+    "ChatGPT 4o": "Holiday-Christmas"
+  },
+  "crocodile": {
+    "Mistral": "Miscellaneous"
+  },
+  "friend": {
+    "Mistral": "Miscellaneous"
+  },
+  "friends": {
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Human-Relationships"
+  },
+  "real": {
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Concepts-Abstract"
+  },
+  "room": {
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Settings-Places"
+  },
+  "signal": {
+    "Mistral": "Miscellaneous",
+    "ChatGPT 4o": "Miscellaneous-Unclassified/Odd"
+  }
+}

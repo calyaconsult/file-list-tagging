@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File List with Tag Filter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .infobox {
+          text-align: left;
+          border-left: 3px solid red;
+          padding-left: 9px;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            opacity: 0.9;
+            font-size: 0.9em;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .filter-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .filter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .filter-header h2 {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .clear-filters {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background 0.3s;
+        }
+
+        .clear-filters:hover {
+            background: #c82333;
+        }
+
+        .clear-filters:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: white;
+            border: 2px solid #667eea;
+            color: #667eea;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9em;
+            user-select: none;
+        }
+
+        .tag:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+        }
+
+        .tag.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .tag .count {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 2px 6px;
+            border-radius: 10px;
+            margin-left: 5px;
+            font-size: 0.85em;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+            color: #666;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .stat strong {
+            color: #667eea;
+        }
+
+        .file-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .file-item {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .file-item:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .file-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .file-icon {
+            font-size: 1.5em;
+        }
+
+        .file-name {
+            font-weight: 600;
+            color: #333;
+            font-size: 1.1em;
+            flex: 1;
+            word-break: break-word;
+        }
+
+        .file-path {
+            color: #999;
+            font-size: 0.85em;
+            margin-bottom: 10px;
+            font-family: monospace;
+        }
+
+        .file-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .file-tag {
+            background: #e7eaf6;
+            color: #667eea;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+        }
+
+        .no-results-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        .no-results h3 {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px;
+            border: 1px solid #f5c6cb;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+            color: #667eea;
+        }
+
+        .loading-spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        .supercategories {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          margin-bottom: 12px;
+        }
+        .supercat {
+          background: #eee;
+          padding: 6px 10px;
+          border-radius: 6px;
+          cursor: pointer;
+        }
+        .supercat.active {
+          background: #007BFF;
+          color: white;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .filter-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📁 File Manager</h1>
+            <p class="subtitle">Filter files by tags to find what you need</p>
+            <p><pre class="infobox"># Empty keyword-index
+echo x > filelists/keyword-index.txt
+nano filelists/keyword-index.txt
+# Compile the index
+bash index_files.sh
+# Upload keyword-index.txt to localhost (Jupyter NB)
+# Run http://localhost:8887/notebooks/work/Reverse-Search-Term-Index.ipynb
+# Download keyword-index-processed.txt
+# Convert to JSON, using
+python3 keyword-index-processed-to-json.py</pre></p>
+        </header>
+
+        <div class="content">
+            <div id="loading" class="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading files...</p>
+            </div>
+
+            <div id="app" style="display: none;">
+                <div class="filter-section">
+                    <div class="filter-header">
+                        <h2>🏷️ Filter by Tags</h2>
+                        <button class="clear-filters" id="clearFilters" disabled>Clear Filters</button>
+                    </div>
+                    <div id="superCategoriesContainer" class="supercategories"></div>
+                    <div id="tagsContainer" class="tags tags-container"></div>
+                </div>
+
+                <div class="stats">
+                    <div class="stat">
+                        <span>Showing</span>
+                        <strong id="visibleCount">0</strong>
+                        <span>of</span>
+                        <strong id="totalCount">0</strong>
+                        <span>files</span>
+                    </div>
+                    <div class="stat" id="activeFiltersCount" style="display: none;">
+                        <span>Active filters:</span>
+                        <strong id="filterCount">0</strong>
+                    </div>
+                </div>
+
+                <div class="file-list" id="fileList"></div>
+
+                <div id="noResults" class="no-results" style="display: none;">
+                    <div class="no-results-icon">🔍</div>
+                    <h3>No files found</h3>
+                    <p>Try selecting different tags or clear your filters</p>
+                </div>
+            </div>
+
+            <div id="error" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script>
+    const SUPER_CATEGORIES = {
+        "Places-Cities": ["Vesta", "Istanbul", "Konstanz", "Munich", "Oxford", "Paris", "Sombreville", "Tucson", "Bodensee", "Dubai", "Zurich", "Zürich"],
+        "Named Characters": ["alison", "aria", "chen", "grandma", "hafsa", "jeannie", "kasper", "mother", "niggel", "sarah", "santa", "seppl"],
+        "Characters General": ["character", "characters", "friends", "humans", "humanity", "protagonist", "reader", "readers"],
+        "Literature": ["book", "chapter", "fiction", "genre", "literary", "literature", "narrative", "novel", "outline", "plot", "scene", "series", "setting", "stories", "story", "storytelling", "structure", "style", "tale", "text", "themes", "title", "voice", "works", "writing", "author"],
+        "Concepts-Abstract": ["change", "changes", "critical", "creative", "decision", "perspective", "presence", "real", "reality", "rich", "risk", "risks", "significant", "transformation"],
+        "Reading-Engagement:": ["introduction", "read", "sentence", "term", "terms"],
+        "time-temporal": ["century", "historical", "history", "past", "present", "time", "times", "future"],
+        "Cultural-Culture": ["art", "artifact", "cultural", "culture", "history", "traditional", "painting", "music", "genre"],
+        "Cultural-Social": ["business", "businesses", "global", "issues", "management", "political", "security", "systems"],
+        "Science-Scientific": ["cyber", "intelligence", "math", "science", "scientific", "signal", "space", "species", "technological", "technology", "systems", "energy"],
+        "Fictional-Fantasy": ["adventure", "alien", "aliens", "desert", "discovery", "dream", "encounter", "experience", "experiences", "fantasy", "genie", "lamp", "magic", "powers", "powerful", "reality", "scenario", "search", "secret", "secrets", "space", "transformation", "version", "world"],
+        "Theme:-Mystery": ["challenge", "challenges", "conflict", "crisis", "crime", "dark", "death", "danger", "dangerous", "military", "murder", "mystery", "noir", "tension", "threat"],
+        "Human-Relationships": ["dream", "friends", "grandma", "journey", "mother", "presence", "voice", "humanity"],
+        "holiday-christmas": ["christmas", "genie", "jeannie", "lamp", "reindeer", "santa"],
+        "Settings-Places": ["city", "room", "scenario", "setting"],
+        "Miscellaneous-Unclassified/Odd": ["blog", "concierge", "empire", "plan", "roman", "search", "signal", "style", "version", "works", "outline", "read"]
+    };
+
+    const DATAFILE = 'keyword-index-processed.json';
+
+    // Optimized data structures
+    let filesData = [];
+    let selectedSuperCategory = null;
+    let selectedTags = new Set();
+    let allTags = new Map();
+    let tagToSuperCategory = new Map(); // Reverse lookup for super categories
+
+    // Cache DOM elements
+    let domCache = {};
+
+    // Precompute data for faster filtering
+    let filesKeywordsSet = []; // Array of Sets for O(1) lookups
+
+    function initializeCache() {
+        domCache = {
+            loading: document.getElementById('loading'),
+            app: document.getElementById('app'),
+            error: document.getElementById('error'),
+            superCategoriesContainer: document.getElementById('superCategoriesContainer'),
+            tagsContainer: document.getElementById('tagsContainer'),
+            fileList: document.getElementById('fileList'),
+            noResults: document.getElementById('noResults'),
+            visibleCount: document.getElementById('visibleCount'),
+            totalCount: document.getElementById('totalCount'),
+            filterCount: document.getElementById('filterCount'),
+            activeFiltersCount: document.getElementById('activeFiltersCount'),
+            clearFilters: document.getElementById('clearFilters')
+        };
+    }
+
+    // Build reverse lookup for super categories
+    function buildSuperCategoryLookup() {
+        tagToSuperCategory.clear();
+        for (const [category, tags] of Object.entries(SUPER_CATEGORIES)) {
+            for (const tag of tags) {
+                tagToSuperCategory.set(tag, category);
+            }
+        }
+    }
+
+    // Load and parse JSON data
+    async function loadData() {
+        try {
+            initializeCache();
+            buildSuperCategoryLookup();
+
+            const response = await fetch(DATAFILE);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            filesData = await response.json();
+
+            // Precompute data structures for performance
+            precomputeDataStructures();
+
+            // Sort tags alphabetically once
+            allTags = new Map([...allTags.entries()].sort((a, b) => a[0].localeCompare(b[0])));
+
+            renderTags();
+            renderSuperCategories();
+            renderFiles();
+            updateStats();
+
+            domCache.loading.style.display = 'none';
+            domCache.app.style.display = 'block';
+        } catch (error) {
+            domCache.loading.style.display = 'none';
+            domCache.error.style.display = 'block';
+            domCache.error.innerHTML = `
+                <strong>Error loading data:</strong> ${error.message}
+                <br><br>
+                Make sure <code>${DATAFILE}</code> is in the same directory as this HTML file.
+            `;
+        }
+    }
+
+    function precomputeDataStructures() {
+        // Clear previous data
+        filesKeywordsSet = [];
+        allTags.clear();
+
+        // Precompute keyword sets for each file and count tags
+        filesData.forEach(file => {
+            const keywordSet = new Set(file.Keywords);
+            filesKeywordsSet.push(keywordSet);
+
+            file.Keywords.forEach(tag => {
+                allTags.set(tag, (allTags.get(tag) || 0) + 1);
+            });
+        });
+    }
+
+    function renderSuperCategories() {
+        const container = domCache.superCategoriesContainer;
+
+        // Use DocumentFragment for batch DOM updates
+        const fragment = document.createDocumentFragment();
+
+        // Create "All" button
+        const allButton = createSuperCategoryElement('All', !selectedSuperCategory);
+        allButton.addEventListener('click', () => {
+            selectedSuperCategory = null;
+            renderTags();
+            renderSuperCategories();
+        });
+        fragment.appendChild(allButton);
+
+        // Create category buttons
+        Object.keys(SUPER_CATEGORIES).forEach(cat => {
+            const catElement = createSuperCategoryElement(cat, selectedSuperCategory === cat);
+            catElement.addEventListener('click', () => {
+                selectedSuperCategory = cat;
+                renderTags();
+                renderSuperCategories();
+            });
+            fragment.appendChild(catElement);
+        });
+
+        // Single DOM update
+        container.innerHTML = '';
+        container.appendChild(fragment);
+    }
+
+    function createSuperCategoryElement(text, isActive) {
+        const element = document.createElement('div');
+        element.className = 'supercat' + (isActive ? ' active' : '');
+        element.textContent = text;
+        return element;
+    }
+
+    // Render tags filter buttons
+    function renderTags() {
+        const container = domCache.tagsContainer;
+        const fragment = document.createDocumentFragment();
+
+        // Filter tags if a supercategory is selected
+        let tagsToShow = [...allTags.entries()];
+        if (selectedSuperCategory) {
+            const allowedTags = new Set(SUPER_CATEGORIES[selectedSuperCategory]);
+            tagsToShow = tagsToShow.filter(([tag]) => allowedTags.has(tag));
+        }
+
+        tagsToShow.forEach(([tag, count]) => {
+            const tagElement = createTagElement(tag, count);
+            fragment.appendChild(tagElement);
+        });
+
+        // Single DOM update
+        container.innerHTML = '';
+        container.appendChild(fragment);
+    }
+
+    function createTagElement(tag, count) {
+        const tagElement = document.createElement('div');
+        tagElement.className = 'tag' + (selectedTags.has(tag) ? ' active' : '');
+        tagElement.innerHTML = `${tag} <span class="count">${count}</span>`;
+        tagElement.addEventListener('click', () => toggleTag(tag));
+        return tagElement;
+    }
+
+    // Toggle tag selection
+    function toggleTag(tag) {
+        if (selectedTags.has(tag)) {
+            selectedTags.delete(tag);
+        } else {
+            selectedTags.add(tag);
+        }
+
+        // Only re-render what's necessary
+        updateTagHighlights();
+        renderFiles();
+        updateStats();
+        updateClearButton();
+    }
+
+    // Update tag highlights without full re-render
+    function updateTagHighlights() {
+        const tags = domCache.tagsContainer.getElementsByClassName('tag');
+        for (let tagElement of tags) {
+            const tagName = tagElement.textContent.split(' ')[0]; // Get tag name without count
+            if (selectedTags.has(tagName)) {
+                tagElement.classList.add('active');
+            } else {
+                tagElement.classList.remove('active');
+            }
+        }
+    }
+
+    // Optimized file filtering using precomputed Sets
+    function getFilteredFiles() {
+        if (selectedTags.size === 0) {
+            return filesData;
+        }
+
+        const filteredFiles = [];
+
+        // Convert selectedTags to array once
+        const selectedTagsArray = [...selectedTags];
+
+        for (let i = 0; i < filesData.length; i++) {
+            const keywordSet = filesKeywordsSet[i];
+
+            // Check if file contains all selected tags
+            let hasAllTags = true;
+            for (let j = 0; j < selectedTagsArray.length; j++) {
+                if (!keywordSet.has(selectedTagsArray[j])) {
+                    hasAllTags = false;
+                    break;
+                }
+            }
+
+            if (hasAllTags) {
+                filteredFiles.push(filesData[i]);
+            }
+        }
+
+        return filteredFiles;
+    }
+
+    // Optimized file rendering
+    function renderFiles() {
+        const fileList = domCache.fileList;
+        const noResults = domCache.noResults;
+        const filteredFiles = getFilteredFiles();
+
+        if (filteredFiles.length === 0) {
+            fileList.style.display = 'none';
+            noResults.style.display = 'block';
+            fileList.innerHTML = '';
+            return;
+        }
+
+        fileList.style.display = 'grid';
+        noResults.style.display = 'none';
+
+        // Use DocumentFragment for batch updates
+        const fragment = document.createDocumentFragment();
+
+        // Pre-create file items
+        filteredFiles.forEach(file => {
+            fragment.appendChild(createFileElement(file));
+        });
+
+        // Single DOM update
+        fileList.innerHTML = '';
+        fileList.appendChild(fragment);
+    }
+
+    function createFileElement(file) {
+        const fileItem = document.createElement('div');
+        fileItem.className = 'file-item';
+
+        const fileExtension = file.Filename.split('.').pop();
+        const icon = getFileIcon(fileExtension);
+
+        const tagsHTML = file.Keywords.map(tag => {
+            const isSelected = selectedTags.has(tag);
+            return `<span class="file-tag ${isSelected ? 'highlight' : ''}">${tag}</span>`;
+        }).join('');
+
+        fileItem.innerHTML = `
+            <div class="file-header">
+                <span class="file-icon">${icon}</span>
+                <div class="file-name"><a href="${file.Path}/${file.Filename}">${file.Filename}</a></div>
+            </div>
+            <div class="file-path">${file.Path}</div>
+            <div class="file-tags">${tagsHTML}</div>
+        `;
+
+        return fileItem;
+    }
+
+    // Get icon based on file extension (unchanged, already efficient)
+    function getFileIcon(extension) {
+        const icons = {
+            'txt': '📄',
+            'pdf': '📕',
+            'doc': '📘',
+            'docx': '📘',
+            'xls': '📗',
+            'xlsx': '📗',
+            'jpg': '🖼️',
+            'jpeg': '🖼️',
+            'png': '🖼️',
+            'gif': '🖼️',
+            'mp4': '🎬',
+            'mp3': '🎵',
+            'zip': '📦',
+            'default': '📄'
+        };
+        return icons[extension.toLowerCase()] || icons['default'];
+    }
+
+    // Update statistics
+    function updateStats() {
+        const filteredFiles = getFilteredFiles();
+        domCache.visibleCount.textContent = filteredFiles.length;
+        domCache.totalCount.textContent = filesData.length;
+        domCache.filterCount.textContent = selectedTags.size;
+
+        const activeFiltersCount = domCache.activeFiltersCount;
+        activeFiltersCount.style.display = selectedTags.size > 0 ? 'flex' : 'none';
+    }
+
+    // Update clear filters button
+    function updateClearButton() {
+        domCache.clearFilters.disabled = selectedTags.size === 0;
+    }
+
+    // Clear all filters
+    domCache.clearFilters?.addEventListener('click', () => {
+        selectedTags.clear();
+        renderTags();
+        renderFiles();
+        updateStats();
+        updateClearButton();
+    });
+
+    // Initialize app
+    loadData();
+    </script>
+</body>
+</html>
